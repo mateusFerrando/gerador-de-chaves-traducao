@@ -9,7 +9,7 @@
 function gerarChaves() {
   var x = document.getElementById("myText");
   var currentVal = x.value;
-  let palavra = currentVal.normalize('NFD').replace(/[\u0300-\u036f]/g, 'ccc').replaceAll(" ", "_");
+  let palavra = currentVal.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll(" ", "_");
   let chave = "\""+  palavra.toLowerCase() + "\"";
   let descricao = "\""+  x.value + "\"";
   let traducoes  = chave + ":" +descricao +",\n";
